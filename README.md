@@ -7,4 +7,4 @@ Additional information can be found at https://www.digitalocean.com/community/tu
     1. Download and install Ubuntu 20.04.5x 1
   
   Docker Installation
-    1. ```sudo apt update```
+    1. ```sudo apt update``` 1
