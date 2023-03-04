@@ -70,6 +70,7 @@ Open GNU Radio using the following command
 ```
 gnuradio-companion
 ```
+![image](https://user-images.githubusercontent.com/124105630/222871651-82c2cb24-f74f-48a9-8f57-c2f37530c327.png)
 
 
 
