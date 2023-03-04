@@ -1,4 +1,4 @@
-# HackRF-One-Transceiver
+# HackRF-One-Receiver
 This repo will give the user everything they need to configure their HackRF One to communicate with their existing CDP network.
 ## Installation ##
 Additional information can be found at https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
@@ -86,37 +86,48 @@ Turn on DuckLink and connect to it on your phone.
 
 ![image](https://user-images.githubusercontent.com/124105630/222922484-5ee8397e-ce9f-4f23-90cd-82df131f0707.png)
 
+# HackRF-One-Transceiver #
+The following steps are adapted from the installation steps mentioned in Tapparelj's Tutorial (https://github.com/tapparelj/gr-lora_sdr)
+## Installation
+Enter the following commands in terminal
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+git clone https://github.com/tapparelj/gr-lora_sdr.git
+```
+```
+cd gr-lora_sdr/
+```
+```
+wget https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh
+```
+```
+bash Miniconda3-py39_4.12.0-Linux-x86_64.sh
+```
+```
+source ~/.bashrc
+```
+before preforming the next command, locate the `environment.yml` file and replace it with the one provided above. 
+```
+conda env create -f environment.yml 
+```
+```
+conda activate gr310
+```
+```
+mkdir build
+cd build
+```
+```
+cmake .. -DCMAKE_INSTALL_PREFIX=usr/local
+```
+```
+sudo make install -jX
+```
+> "X" is the number of cores you want to use when compiling 
+```
+sudo ldconfig
+```
+``` 
+gnuradio-companion &
+```
+Using `lora_TX.grc` and `lora_RX.grc` you can now transmit and recieve information to/from your ducks.
