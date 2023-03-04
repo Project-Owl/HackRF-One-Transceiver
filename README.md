@@ -1,10 +1,11 @@
 # HackRF-One-Transceiver
-lorem ipsum
+This repo will give the user everything they need to configure their HackRF One to communicate with their existing CDP network.
 ## Installation ##
 Additional information can be found at https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04
 
 ### Ubuntu Installation ###
 Download and install Ubuntu 20.04.5x
+<br> A useful tutorial can be found here https://youtu.be/x5MhydijWmc
   
 ### Docker Installation ###
 Run the following commands in terminal
@@ -46,7 +47,7 @@ docker ps -a
 ```
 Your current images should appear
 
-### Creating the Docker Image and Running the Application ###
+## Creating the Docker Image and Running the Application ##
 Download the Dockerfile and rundocker.sh provided above then enter the following commands 
 
 ```
@@ -71,6 +72,48 @@ Open GNU Radio using the following command
 gnuradio-companion
 ```
 ![image](https://user-images.githubusercontent.com/124105630/222871651-82c2cb24-f74f-48a9-8f57-c2f37530c327.png)
+
+### Generating and running the file ###
+Click the "File" drop down located in the top left of the window. 
+<br> Open Apps `lora_receive_realtime.grc`.
+Press "Generate” then “Run”. 
+Open the terminal to see the message receiving output
+
+![image](https://user-images.githubusercontent.com/124105630/222921858-4bd8b638-b6ef-4a93-b5f0-1ba121a65825.png)
+
+Turn on DuckLink and connect to it on your phone.
+<br> Send a message through the DuckLink that you should see received on the terminal.
+
+![image](https://user-images.githubusercontent.com/124105630/222922484-5ee8397e-ce9f-4f23-90cd-82df131f0707.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
